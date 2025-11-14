@@ -1,0 +1,9 @@
+POST http://localhost:3000/api/sendMessage
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0dXNlcjEyMyIsImlhdCI6MTc1NzUxMTY3MSwiZXhwIjoxNzU3NTE1MjcxfQ.tXuXmi6ySMbegVz4z3aqgXojnQCj5BTKoc3kRz8gGvc
+
+{
+  "sender_id": 1,
+  "receiver_id": 2,
+  "content": "你好，这是一条测试消息！"
+}
