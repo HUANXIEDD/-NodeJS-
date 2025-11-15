@@ -10,10 +10,15 @@ const sendMessageRouter = require(path.resolve(__dirname , './api/sendMessage'))
 
 app.use(express.json())
 app.use(cookie())
+app.get('/login', (req , res) =>{
+  res.sendFile(path.join(__dirname , './public/login.html'))
+})
+app.use(express.static(path.join(__dirname, './public')));
+
 app.use('/api' , registerRouter)
 app.use('/api' , loginRouter)
 app.use('/api' , sendMessageRouter)
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
-}); 
+});
